@@ -33,9 +33,7 @@ class Parking(object):
 
     def process_scan(self, m):
         """ Callback Function for laser subscriber """
-        #current_dist = m.ranges[270]  # CHANGE?
 	current_dist = m.ranges[10]
-        #print "Ranges[10]: ", current_dist
 			
 	if self.timestamp2 is None:
             self.twist = FORWARD
@@ -63,10 +61,7 @@ class Parking(object):
             self.adjustment = 0.1
             self.widthofspot = SPEED * (self.timestamp2.secs - self.timestamp1.secs)
 
-            if self.widthofspot >= 0.75 and not self.is_aligned:
-	#self.dis2box >= 0.3
-                #self.align_with_origin()
-		
+            if self.widthofspot >= 0.75 and not self.is_aligned:	
 		self.warmup()
                 self.park()
                 rospy.signal_shutdown("Done parking.")
@@ -77,15 +72,6 @@ class Parking(object):
 
     def stop(self):
         self.publisher.publish(STOP)
-
-    def align_with_origin(self):
-        dist = self.radius - self.widthofspot/2.0 + self.adjustment
-        now = rospy.Time.now()
-        travel_time = dist/SPEED  # distance / speed = time
-        while rospy.Time.now() - now <= rospy.Duration(travel_time):
-            self.twist = FORWARD
-        self.twist = STOP
-        self.is_aligned = True
 
     def drive_arc(self, omega, travel_time, sign):
         now = rospy.Time.now()
@@ -111,11 +97,6 @@ class Parking(object):
         omega = SPEED / self.radius
         travel_time = rospy.Duration(math.pi/2.0/omega)
         self.drive_arc(-omega, travel_time, -1)
-
-        # third drive_arc
-        #omega = -0.4
-        #travel_time = rospy.Duration(1)
-        #self.drive_arc(omega, travel_time, 1)
 
 	# straight drive_arc
         omega = 0
