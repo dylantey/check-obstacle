@@ -20,7 +20,6 @@ class Parking(object):
         # Instance Variables
         self.timestamp1 = None
         self.timestamp2 = None
-        self.dist2wall = None
         self.dis2box = None
         self.widthofspot = None
         self.twist = None
