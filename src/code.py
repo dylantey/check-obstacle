@@ -7,7 +7,6 @@ import math
 import time
 
 """ Global Variables """
-LENGTH_OF_SPOT = 0.5 # The parking spots are half a meter long.
 STOP = Twist(linear=Vector3(0,0,0), angular=Vector3(0,0,0))
 SPEED = 0.2
 FORWARD = Twist(linear=Vector3(SPEED,0.0,0.0), angular=Vector3(0.0,0.0,0.0))
