@@ -42,7 +42,7 @@ class Parking(object):
                 self.dis2box = current_dist
                 print "dis2box: ", self.dis2box
             
-			# Set the distance to wall when seeing empty space for the first time
+	    # Set the distance to wall when seeing empty space for the first time
 	    if current_dist > (self.dis2box + 0.5):
                 if self.timestamp1 is None:
 			self.dis2wall = current_dist
@@ -50,7 +50,7 @@ class Parking(object):
                         self.timestamp1 = rospy.Time.now()
                         print "TIME1: ", self.timestamp1
 			
-			# Almost past the parking space
+	    # Almost past the parking space
             if abs(current_dist - self.dis2box) <= 0.02 and self.timestamp1 is not None:
                 self.timestamp2 = rospy.Time.now()
                 print "TIME2: ", self.timestamp2
