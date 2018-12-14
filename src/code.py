@@ -1,5 +1,9 @@
 #!/usr/bin/env python
 
+# Code structured using the repo below,
+# but methodology significantly changed.
+# https://github.com/jovanduy/AutonomousParking
+
 import rospy
 from sensor_msgs.msg import LaserScan
 from geometry_msgs.msg import Twist, Vector3
