@@ -63,6 +63,7 @@ class Parking(object):
             self.adjustment = 0.1
             self.widthofspot = SPEED * (self.timestamp2.secs - self.timestamp1.secs)
 
+	    # parks if the spot calculated is equal or more than 0.75m
             if self.widthofspot >= 0.75 and not self.is_aligned:	
 		self.warmup()
                 self.park()
