@@ -11,9 +11,9 @@ import math
 import time
 
 """ Global Variables """
-STOP = Twist(linear=Vector3(0,0,0), angular=Vector3(0,0,0))
+STOP = Twist(linear=Vector3(0, 0, 0), angular=Vector3(0, 0, 0))
 SPEED = 0.2
-FORWARD = Twist(linear=Vector3(SPEED,0.0,0.0), angular=Vector3(0.0,0.0,0.0))
+FORWARD = Twist(linear=Vector3(SPEED, 0.0, 0.0), angular=Vector3(0.0, 0.0, 0.0))
 
 class Parking(object):
     def __init__(self):
