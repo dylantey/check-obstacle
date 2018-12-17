@@ -7,7 +7,8 @@ Dylan Tey, Tian Wu
 - `roscore`
 - `roslaunch turtlebot_bringup minimal.launch`
 - `roslaunch turtlebot_navigation gmapping_demo.launch`
-- `roslaunch check_obstacle code_launch.launch (Remember to source it: source ~/catkin_ws/devel/setup.bash or wherever you store this code)` 
+- `roslaunch check_obstacle code_launch.launch`
+- `(Remember to source it: source ~/catkin_ws/devel/setup.bash or wherever you store this code)` 
 
 ## Dependencies
 - Ubuntu 14.04
