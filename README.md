@@ -11,7 +11,7 @@ Dylan Tey, Tian Wu
 - `(Remember to source it: source ~/catkin_ws/devel/setup.bash or wherever you store this code)` 
 
 ## Dependencies
-- Ubuntu 14.04
+- std_msgs
 
 ## Video Demonstration
 https://www.youtube.com/watch?v=3RvNUom848I
