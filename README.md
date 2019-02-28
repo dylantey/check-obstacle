@@ -3,6 +3,9 @@
 ## Group Members
 Dylan Tey, Tian Wu
 
+## The Project
+This project is the final project of the Introduction to Intelligent Robotic Systems from the University of Minnesota-Twin Cities. This ROS package allows a TurtleBot 2 to parallel park. 
+
 ## How to Run It
 - `roscore`
 - `roslaunch turtlebot_bringup minimal.launch`
